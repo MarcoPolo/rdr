@@ -1,20 +1,22 @@
 {
-  "name": "syndicate-rss",
+  "name": "rdr",
   "version": "1.0.0",
   "description": "Copy an RSS feed into a blog post md file",
   "main": "dist/index.js",
   "bin": "bin.js",
-  "repository": "https://github.com/marcopolo/syndicate-rss",
+  "repository": "https://github.com/marcopolo/rdr",
   "author": "marcopolo",
   "license": "MIT",
   "devDependencies": {
+    "@types/jsdom": "^16.2.6",
     "@types/minimist": "^1.2.1",
+    "@types/mozilla-readability": "^0.2.0",
     "@types/node": "^14.14.22",
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@iarna/toml": "^2.2.5",
-    "minimist": "^1.2.5",
-    "rss-parser": "^3.10.0"
+    "@mozilla/readability": "^0.4.1",
+    "jsdom": "^16.4.0",
+    "minimist": "^1.2.5"
   }
 }

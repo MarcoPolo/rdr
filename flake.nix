@@ -1,5 +1,5 @@
 {
-  description = "syndicate-rss";
+  description = "rdr";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/release-20.09";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
@@ -15,17 +15,17 @@
           };
           defaultPackage = pkgs.mkYarnPackage
             {
-              name = "syndicate-rss";
+              name = "rdr";
               src = ./.;
               packageJSON = ./package.json;
               yarnLock = ./yarn.lock;
               postBuild = ''
                 ls -lha .
                 yarn tsc
-                (cd ./deps/syndicate-rss && yarn tsc)
-                chmod a+x ./deps/syndicate-rss/dist/*
-                chmod a+x ./deps/syndicate-rss/dist/*
-                ls -lha ./deps/syndicate-rss/dist/
+                (cd ./deps/rdr && yarn tsc)
+                chmod a+x ./deps/rdr/dist/*
+                chmod a+x ./deps/rdr/dist/*
+                ls -lha ./deps/rdr/dist/
               '';
               # NOTE: this is optional and generated dynamically if omitted
               # yarnNix = ./yarn.nix;
